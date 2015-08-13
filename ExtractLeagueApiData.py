@@ -30,14 +30,6 @@ for i in range(1, 5):
     temp2 = urllib2.urlopen(url2).read()
     jsonData1 = json.loads(temp1)
     jsonData2 = json.loads(temp2)
-    # I want to compare damage done before and after, ap (over time if possible)
-    # which items bought on which champions, and ranked vs normal (damage done as well)
-
-    # How would I organize it?
-
-    # Probably something along the lines of a ton of graphs that transition all fancy. This is really broad.
-    # I'd probably have each graph compare champion data from pre/post ap changes, and have the option to look at
-    # Ranked/not ranked (if I can).
 
     for attrib in jsonData1['participants']:
         for n in range(0, 7):
