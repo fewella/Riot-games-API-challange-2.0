@@ -45,7 +45,3 @@ for x in range(len(PreAPItems)):
     f1.write(str(PreAPItems[x]) + '\n')
     f2.write(str(PostAPItems[x]) + '\n')
     
-    
-    
-    
-    
