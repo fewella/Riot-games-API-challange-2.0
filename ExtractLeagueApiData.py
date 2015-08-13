@@ -1,18 +1,13 @@
 import urllib2
 import json
-#import time
-	
+
 PreAPGameIDs = []
 PostAPGameIDs = []
-JsonRawData = []
 PreAPItems = []
 PostAPItems = []
-totalAPItems = 0
-totalItems = 0
 
 key = '251e4552-7ed7-491a-abdf-6329eb10d6f3'
 urlBase = 'https://na.api.pvp.net/api/lol/na/v2.2/match/'
-# APChampions = ['Ahri'...]
 f1 = open('AP_ITEM_DATASET/5.11/RANKED_SOLO/NA.json', 'r')
 f2 = open('AP_ITEM_DATASET/5.14/RANKED_SOLO/NA.json', 'r')
 itemText = ['item0', 'item1', 'item2', 'item3', 'item4', 'item5', 'item6']
@@ -47,9 +42,13 @@ for i in range(1, 5):
     for attrib in jsonData1['participants']:
         for n in range(0, 7):
             PreAPItems.append(attrib['stats'][itemText[n]])
-            totalItems += 1
 
     for attrib in jsonData2['participants']:
         for n in range(0, 7):
             PostAPItems.append(attrib['stats'][itemText[n]])
-            totalItems += 1
+
+f1 = open("PreAPItemIDs.txt", 'a')
+f2 = open('PostAPItemIDs.txt', 'a')
+for x in range(len(PreAPItems)):
+    f1.write(str(PreAPItems[x]) + '\n')
+    f2.write(str(PostAPItems[x]) + '\n')
