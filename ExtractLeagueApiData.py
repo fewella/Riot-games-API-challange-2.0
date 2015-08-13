@@ -6,7 +6,7 @@ PostAPGameIDs = []
 PreAPItems = []
 PostAPItems = []
 
-key = '251e4552-7ed7-491a-abdf-6329eb10d6f3'
+key = 'This is secured somewhere no one sees'
 urlBase = 'https://na.api.pvp.net/api/lol/na/v2.2/match/'
 f1 = open('AP_ITEM_DATASET/5.11/RANKED_SOLO/NA.json', 'r')
 f2 = open('AP_ITEM_DATASET/5.14/RANKED_SOLO/NA.json', 'r')
